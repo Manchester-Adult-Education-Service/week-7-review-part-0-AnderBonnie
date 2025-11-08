@@ -28,8 +28,9 @@ print("-------------------------------------------\n"
 # Output: Hello, Jordan! You enjoy painting.
 
 # Write your code below:
-
-
+name = input("What is your name?:")
+hobby = input("What is your hobby?:").lower()
+print (f"Hello, {name}! You enjoy {hobby}.")
 
 # SWAP LEARNERS BEFORE THIS STEP
 # Step 2:
@@ -38,6 +39,8 @@ print("-------------------------------------------\n"
 # “Jordan is 25 years old and enjoys painting.”
 #
 # Write your code below:
+users_age = int(input("What is your age?:"))
+print (f"{name} is {users_age} years old and enjoys {hobby}.")
 
 
 
@@ -48,7 +51,10 @@ print("-------------------------------------------\n"
 # - Otherwise, print “That’s a great hobby for oldies too!”
 #
 # Write your code below:
-
+if users_age < 40:
+    print (f"You' re quite young to be into {hobby}")
+else :
+    print ("That's a great hobby for oldies too!")
 
 
 
@@ -72,6 +78,10 @@ print("-------------------------------------------\n"
 # Counting: 5
 
 # Write your code below:
+limit = int(input("Enter a number between 1 to 10:"))
+for i in range (1, limit + 1):
+    print (f"Counting: {i}")
+
 
 
 
@@ -81,8 +91,11 @@ print("-------------------------------------------\n"
 # Print "x is even" or "x is odd" for each number.
 #
 # Write your code below:
-
-
+for i in range(1, limit +1):
+    if i % 2 == 0 :
+        print(f"{i} is even.")
+    else :
+        print(f"{i} is odd.")
 
 
 # Task 3: Shopping List Builder
@@ -102,7 +115,14 @@ print("-------------------------------------------\n"
 # Output list should be ['milk', 'eggs', 'bread']
 
 # Write your code below:
-
+shopping_list = []
+item1 = input("Enter item 1:").lower().strip()
+shopping_list.append (item1)
+item2 = input("Enter item 2:").lower().strip()
+shopping_list.append (item2)
+item3 = input("Enter item 3:").lower().strip()
+shopping_list.append (item3)
+print("Your list so far:", shopping_list)
 
 
 # SWAP LEARNERS BEFORE THIS STEP
@@ -115,6 +135,9 @@ print("-------------------------------------------\n"
 # bread
 #
 # Write your code below:
+print("Your shopping list:")
+for item in shopping_list:
+    print(item)
 
 
 
@@ -124,8 +147,11 @@ print("-------------------------------------------\n"
 # Append it to the list and print the updated list again.
 #
 # Write your code below:
-
-
+new_item = input("Enter one more item:")
+shopping_list.append(new_item)
+print ("Updated shopping list:")
+for item in shopping_list:
+    print (item)
 
 
 # Task 4: Number Guessing Game
@@ -138,8 +164,8 @@ print("-------------------------------------------\n"
 # Ask the user to guess the number.
 #
 # Write your code below:
-
-
+secret_number = 5
+guess = int(input("Guess the secret number between 1 and 10:"))
 
 # SWAP LEARNERS BEFORE THIS STEP
 # Step 2:
@@ -148,6 +174,10 @@ print("-------------------------------------------\n"
 # - Otherwise, print “Wrong, try again!”
 #
 # Write your code below:
+if guess == secret_number:
+    print ("Correct!")
+else:
+    print ("Wrong, try again!")    
 
 
 
@@ -157,6 +187,10 @@ print("-------------------------------------------\n"
 # Print “Well done!” when they finally get it right.
 #
 # Write your code below:
+
+while guess != secret_number:
+    guess = int(input("Wrong, try again:"))
+print ("Well done! You guessed it!")    
 
 
 
@@ -171,8 +205,7 @@ print("-------------------------------------------\n"
 # Store this number in a variable and convert it to an integer.
 
 # Write your code below:
-
-
+count = int(input("How many numbers would you want to enter?"))
 
 # SWAP LEARNERS BEFORE THIS STEP
 # Step 2:
@@ -181,7 +214,10 @@ print("-------------------------------------------\n"
 # Convert each input to int() and append it to the list.
 #
 # Write your code below:
-
+numbers = []
+for i in range (count):
+    num = int(input(f"Enter number {i + 1}:"))
+    numbers.append(num)
 
 
 # SWAP LEARNERS BEFORE THIS STEP
@@ -191,9 +227,8 @@ print("-------------------------------------------\n"
 # "The average of your numbers is X"
 #
 # Write your code below:
-
-
-
+average = sum(numbers) / len(numbers)
+print(f"The average of your number is {average}.")
 
 # -------------------------------------------
 # EXTENSION ACTIVITY
